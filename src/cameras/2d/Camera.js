@@ -572,8 +572,13 @@ var Camera = new Class({
         var displayWidth = width / zoom;
         var displayHeight = height / zoom;
 
-        var vwx = Math.floor(midX - (displayWidth / 2));
-        var vwy = Math.floor(midY - (displayHeight / 2));
+        var vwx = midX - (displayWidth / 2);
+        var vwy = midY - (displayHeight / 2);
+        if (this.roundPixels)
+        {
+            vwx = Math.floor(vwx);
+            vwy = Math.floor(vwy);
+        }
 
         this.worldView.setTo(vwx, vwy, displayWidth, displayHeight);
 
