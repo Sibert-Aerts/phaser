@@ -88,7 +88,7 @@ var GameObject = new Class({
          * @type {(number|string)}
          * @since 3.16.0
          */
-        this.state = 0;
+        this.state;
 
         /**
          * The parent Container of this Game Object, if it has one.
